@@ -1,29 +1,32 @@
-## Hi there 👋
+def work_life_balance(task: str, mood: str = 'neutral') -> str:
+    """
+    A function to balance work and fun.
 
-<h1 align="center">Hi there 👋</h1>
+    Args:
+    - task (str): The task to execute.
+    - mood (str): Your current mood. Default is 'neutral'.
 
-<p align="center">
-  <img src="your_profile_photo.jpg" width="200" height="200" style="border-radius:50%;">
-</p>
+    Returns:
+    - str: A fun yet professional message.
+    """
+    fun_emojis = {
+        'happy': '😊',
+        'neutral': '😐',
+        'sad': '😔'
+    }
 
-<h2 align="center">Your Name</h2>
-<h3 align="center">username</h3>
+    professional_advice = {
+        'happy': "Great! But don't forget your responsibilities.",
+        'neutral': "Stay balanced, don't overwork or overplay.",
+        'sad': "Maybe take a short break and come back stronger."
+    }
 
-<p align="center">
-  <a href="#" style="text-decoration: none; padding: 8px 16px; background: #24292e; color: white; border-radius: 6px;">
-    Follow/Unfollow
-  </a>
-</p>
+    if mood not in fun_emojis:
+        return "Invalid mood! Please choose between 'happy', 'neutral', or 'sad'."
 
-<p align="center">
-  Brief bio describing your expertise
-</p>
+    return f"Task to complete: {task} {fun_emojis[mood]}. " \
+           f"Advice: {professional_advice[mood]}"
 
-<p align="center">
-  <b>2.3k</b> followers · <b>35</b> following
-</p>
-
-<p align="center">
-  📍 Location<br>
-  <a href="#">Block or Report</a>
-</p>
+# Example usage:
+message = work_life_balance("Complete Python project", "happy")
+print(message)
