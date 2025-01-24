@@ -1,7 +1,10 @@
+### Hi there 👋
+
+```python
 def work_life_balance(task: str, mood: str = 'neutral') -> str:
     """
     A function to balance work and fun.
-
+    
     Args:
     - task (str): The task to execute.
     - mood (str): Your current mood. Default is 'neutral'.
@@ -10,9 +13,9 @@ def work_life_balance(task: str, mood: str = 'neutral') -> str:
     - str: A fun yet professional message.
     """
     fun_emojis = {
-        'happy': '😊',
+        'happy': '😄',
         'neutral': '😐',
-        'sad': '😔'
+        'sad': '😞'
     }
 
     professional_advice = {
@@ -24,9 +27,10 @@ def work_life_balance(task: str, mood: str = 'neutral') -> str:
     if mood not in fun_emojis:
         return "Invalid mood! Please choose between 'happy', 'neutral', or 'sad'."
 
-    return f"Task to complete: {task} {fun_emojis[mood]}. " \
-           f"Advice: {professional_advice[mood]}"
+    return (f"Task to complete: {task} {fun_emojis[mood]}. "
+            f"Advice: {professional_advice[mood]}")
 
 # Example usage:
 message = work_life_balance("Complete Python project", "happy")
 print(message)
+```
